@@ -12,8 +12,6 @@ namespace BlackJack.DAL.Entities
 
         public Player Player { get; set; }
 
-        public ICollection<Card> Cards { get; set; }
-
-        public bool IsDealer { get; set; }
+        //public ICollection<Card> Cards { get; set; }
     }
 }

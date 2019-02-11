@@ -21,3 +21,17 @@ namespace BlackJack.Models
         public Hand Hand { get; set; }
     }
 }
+
+
+
+
+ProductsViews
+    GetAllProductsView => List< ProductGetAllProductsViewItem >
+    ProductGetAllProductsViewItem
+
+    GetByIdProductsView => 
+
+    CreateProductsView => 
+
+
+    UpdateProductsView
