@@ -23,7 +23,7 @@ namespace BlackJack.DAL.Repositories
             return db.Hands.Include(o => o.Player);
         }
 
-        public Hand Get(int id)
+        public Hand Get(Guid id)
         {
             return db.Hands.Find(id);
         }
@@ -41,7 +41,7 @@ namespace BlackJack.DAL.Repositories
         {
             return db.Hands.Include(o => o.Player).Where(predicate).ToList();
         }
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             Hand hand = db.Hands.Find(id);
             if (hand != null)

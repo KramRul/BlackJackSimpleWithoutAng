@@ -7,7 +7,7 @@ namespace BlackJack.DAL.Entities
     public class Card
     {
         //public Guid Id { get; set; }
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public Rank Rank { get; set; }
 

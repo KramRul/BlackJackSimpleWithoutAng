@@ -1,18 +1,18 @@
-﻿using BlackJack.DAL.Entities;
-using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BlackJack.BLL.DTO
+namespace BlackJack.DAL.Entities
 {
-    public class PlayerDTO: IdentityUser
+    public class Bot
     {
+        public Guid Id { get; set; }
+
         public decimal Balance { get; set; }
 
         public decimal Bet { get; set; }
 
-        public Role Role { get; set; }
+        public int HandId { get; set; }
 
         public Hand Hand { get; set; }
     }

@@ -23,7 +23,7 @@ namespace BlackJack.DAL.Repositories
             return db.Users;
         }
 
-        public Player Get(int id)
+        public Player Get(Guid id)
         {
             return db.Users.Find(id);
         }
@@ -43,7 +43,7 @@ namespace BlackJack.DAL.Repositories
             return db.Users.Where(predicate).ToList();
         }
 
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             Player player = db.Users.Find(id);
             if (player != null)

@@ -10,6 +10,7 @@ namespace BlackJack.DAL.Interfaces
         IRepository<Player> Players { get; }
         IRepository<Card> Cards { get; }
         IRepository<Hand> Hands { get; }
+        IRepository<Bot> Bots { get; }
         void Save();
     }
 }

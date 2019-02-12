@@ -1,11 +1,12 @@
 ﻿using BlackJack.DAL.Entities;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace BlackJack.BLL.DTO
+namespace BlackJack.BLL.Models
 {
-    public class CardDTO
+    public class CardViewModel
     {
         public int Id { get; set; }
 
@@ -20,3 +21,17 @@ namespace BlackJack.BLL.DTO
         public Hand Hand { get; set; }
     }
 }
+
+
+
+
+/*ProductsViews
+    GetAllProductsView => List< ProductGetAllProductsViewItem >
+    ProductGetAllProductsViewItem
+
+    GetByIdProductsView => 
+
+    CreateProductsView => 
+
+
+    UpdateProductsView*/

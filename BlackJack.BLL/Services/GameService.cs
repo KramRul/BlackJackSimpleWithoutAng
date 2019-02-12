@@ -1,6 +1,6 @@
-﻿using BlackJack.BLL.DTO;
-using BlackJack.BLL.Infrastructure;
+﻿using BlackJack.BLL.Infrastructure;
 using BlackJack.BLL.Interfaces;
+using BlackJack.BLL.Models;
 using BlackJack.DAL.Entities;
 using BlackJack.DAL.Interfaces;
 using System;
@@ -25,10 +25,18 @@ namespace BlackJack.BLL.Services
             GameState = GameState.Unknown;
         }
 
-        public void Hit(PlayerDTO playerDTO)
+        public void Hit(PlayerViewModel playerVM)
         {
-            Player player = Database.Players.Get(Convert.ToInt32(playerDTO.Id));
-            player.Hand.Cards.Add(GetCard());
+            Player player = Database.Players.Get(new Guid(playerVM.Id));
+
+            var qq = new List<Hand>();
+            qq.Add(new Hand()
+            {
+                PlayerId = //,
+                
+            });
+
+            player.Hand.Add(GetCard());
             if (TotalValue(player.Hand) > 21)
             {
                 player.Balance -= player.Bet;
@@ -141,7 +149,7 @@ namespace BlackJack.BLL.Services
             Database.Save();
         }
 
-        public void StopGame(PlayerDTO playerDTO)
+        public void StopGame()
         {
             throw new NotImplementedException();
         }

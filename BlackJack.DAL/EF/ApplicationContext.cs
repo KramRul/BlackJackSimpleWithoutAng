@@ -13,6 +13,7 @@ namespace BlackJack.DAL.EF
         public DbSet<Card> Cards { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<Hand> Hands { get; set; }
+        public DbSet<Bot> Bots { get; set; }
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)

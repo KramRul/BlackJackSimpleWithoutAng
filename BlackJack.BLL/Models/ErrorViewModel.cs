@@ -1,6 +1,6 @@
 using System;
 
-namespace BlackJack.Models
+namespace BlackJack.BLL.Models
 {
     public class ErrorViewModel
     {

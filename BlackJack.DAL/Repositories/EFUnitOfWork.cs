@@ -14,6 +14,7 @@ namespace BlackJack.DAL.Repositories
         private CardRepository cardRepository;
         private HandRepository handRepository;
         private PlayerRepository playerRepository;
+        private BotRepository botRepository;
 
         public EFUnitOfWork(string connectionString)
         {
@@ -48,6 +49,16 @@ namespace BlackJack.DAL.Repositories
                 if (playerRepository == null)
                     playerRepository = new PlayerRepository(db);
                 return playerRepository;
+            }
+        }
+
+        public IRepository<Bot> Bots
+        {
+            get
+            {
+                if (botRepository == null)
+                    botRepository = new BotRepository(db);
+                return botRepository;
             }
         }
 
